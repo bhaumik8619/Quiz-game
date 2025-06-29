@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>🧠 Quiz Game</h1>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider"></span>
+        </label>
+        <span>Dark Mode</span>
+      </div>
+    </div>
+
+    <div id="quiz-box">
+      <div class="question-box">
+        <h2 id="question">Question text</h2>
+      </div>
+
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(0)">Option 1</button>
+        <button class="option-btn" onclick="selectOption(1)">Option 2</button>
+        <button class="option-btn" onclick="selectOption(2)">Option 3</button>
+        <button class="option-btn" onclick="selectOption(3)">Option 4</button>
+      </div>
+
+      <div class="controls">
+        <button onclick="prevQuestion()">⏮️ Prev</button>
+        <span id="timer">⏱ 10</span>
+        <button onclick="nextQuestion()">Next ⏭️</button>
+      </div>
+
+      <div id="feedback"></div>
+    </div>
+
+    <div id="result-box" class="hidden">
+      <h2>Your Score: <span id="score"></span>/5</h2>
+      <button onclick="restartQuiz()">Restart 🔁</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
